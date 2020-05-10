@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="regiform.js"></script>
+    <link rel="stylesheet" type="text/css" href="regi.css"> 
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+    <div id="home" class="wrapper">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="header-top">
+                        <div class="col-md-5 col-sm-4">
+                            <a class="logo-img" href="index.php"><img src="logo.png" alt="logo"></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="contact.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="login-nav">
+                            <fieldset class="hidden-xs">
+                                <form name="LoginForm" method="post" action="">
+                                    <input type="text" name="username" placeholder="username">
+                                    <input type="text" name="password" placeholder="password">
+                                    <input class="submit" type="submit" name="submit" value="login">
+                                </form>
+                                <form>
+                                    <span class="forgot-ragister">
+                                        <a href="http://www.agriwatch.com/forgotPassword.php">ForgotPassword?</a>
+                                        <a href="http://www.agriwatch.com/registration.php" class="register">Registernow</a>
+                                    </span>
+                                </form>
+                                
+                            </fieldset>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section>
+        <hr class="hr">
+        <h3><b>नोंदणी</b></h3>
+        <form class="form-regi" name="registration" action="" onSubmit="return formValidation();">
+            <h4 class="h4">कृपया नोंदणीसाठी खालील फॉर्म भरा...!!!</h4>
+            <hr class="dotted">
+            <fieldset>
+                <div class="control-group">
+                    <!-- E-mail -->
+                    <label class="control-label" for="email">ई-मेल<span class="required">*</span></label>
+                    <input type="text" class="input-xlarge" id="userId" required name="email" value="" maxlength=50 onBlur="isUserAvailable();"/>
+                    <span id="lblAvailMessage"></span>
+                      
+                </div>
+                <hr class="dotted">
+                <div class="control-group">
+                    <!-- Username -->
+                    <label class="control-label" for="username">नाव <span class="required">*</span></label>
+                    <input type="text" class="input-xlarge" required id="usrsName" name="username" value=""/> 
+                </div>
+                <hr class="dotted">
+                <div class="control-group">
+                    <!-- Phone No. -->
+                    <label class="control-label" for="phone">फोन नंबर<span class="required">*</span></label>
+                    <input type="tel" onKeyPress="return isNumberKey1(event)" class="input-xlarge" required maxlength="10"  id="usrsMob" name="mobno"  value="" />
+                    <span id="errmsg1"></span> 
+                </div>
+                <hr class="dotted">
+                <div class="control-group">
+                    <!-- Address-->
+                    <label class="control-label" for="address">पत्ता <span class="required">*</span></label>
+                    <textarea class="input-xlarge"  style="height:40px;" required id="usrsAddress" name="address" ></textarea>
+                </div>
+                <hr class="dotted">
+                <div class="control-group">
+                    <!-- State-->
+                    <label class="control-label" for="state">राज्य <span class="required">*</span></label>            
+                    <input type="text" class="input-xlarge" required   name="state" id="usrsCity" value="" />
+                </div>
+                <hr class="dotted">
+                <div class="control-group">
+                    <!-- District-->
+                    <label class="control-label" for="district">जिल्हा <span class="required">*</span></label>
+                    <select name="district" class="input-xlarge" id="usrsCountry" required>
+                        <option value="">निवडा</option>
+                        <option value="dist1" >अहमदनगर</option>
+                        <option value="dist2" >अकोला</option>
+                        <option value="dist3">अमरावती</option>
+                        <option value="dist4">औरंगाबाद</option>
+                        <option value="dist5">बीड</option>
+                        <option value="dist6">भंडारा</option>
+                        <option value="dist7">बुलढाणा</option>
+                        <option value="dist8">चंद्रपूर</option>
+                        <option value="dist9">धुळे</option>
+                        <option value="dist10">गडचिरोली</option>
+                        <option value="dist11">गोंदिया</option>
+                        <option value="dist12">हिंगोली  </option>
+                        <option value="dist13">जलगाव</option>
+                        <option value="dist14">जालना</option>
+                        <option value="dist15">कोल्हापूर</option>
+                        <option value="dist16">लातूर </option>
+                        <option value="dist17">मुंबई शहर</option>
+                        <option value="dist18"> मुंबई उपनगरी</option>
+                        <option value="dist19">नागपूर </option>
+                        <option value="dist20">नांदेड</option>
+                        <option value="dist21">नंदुरबार</option>
+                        <option value="dist22">नासिक</option>
+                        <option value="dist23">उस्मानाबाद </option>
+                        <option value="dist24">पालघर</option>
+                        <option value="dist25">परभणी</option>
+                        <option value="dist26">पुणे</option>
+                        <option value="dist27">रायगड</option>
+                        <option value="dist28">रत्नागिरी</option>
+                        <option value="dist29">सांगली</option>
+                        <option value="dist30">सातारा</option>
+                        <option value="dist33">सिंधुदुर्ग</option>
+                        <option value="dist32">सोलापुर</option>
+                        <option value="dist33">ठाणे</option>
+                        <option value="dist34">वर्धा</option>
+                        <option value="dist35">वाशिम</option>
+                        <option value="dist36">यवतमाळ</option>
+                    </select>
+                </div>  
+                <hr class="hr">
+                <div class="control-group">
+                    <!-- Pincode-->
+                    <label class="control-label" for="zip">पिन कोड </label>
+                    <input type="text" class="input-xlarge"  name="zip" id="usrsPin" value=""/>
+                </div>
+                <hr class="hr">
+                <div class="control-group">
+                    <!-- Username -->
+                    <label class="control-label" for="passid">Password 
+                        <span class="required">*</span></label>
+                    <input type="password" class="input-xlarge" required id="passid" name="passid" value=""/> 
+                </div>  
+                <hr class="hr">
+                <div class="control-group text-center">
+                    <p>Note: <span class="required">*</span> Indicates mandatory fields</p>
+                    <p>Please give the correct email address and phone number.</p>
+                </div>
+                <hr class="hr">
+                 <div class="control-group submit-buttons">
+                    <!-- Button -->
+                    <input type="Submit" class = "button" value="Submit" name="Submit" />&nbsp; &nbsp; &nbsp; &nbsp;<input type="reset" class = "button" name="reset">
+                    <input type="hidden" name="uservalid" id="uservalid" value="">
+                </div>                                               
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <h3 style="text-align: center; background-color: black; color: white;">शेतीवाडी</h3>
+    </footer>
+</body>
+
+
+</html>
